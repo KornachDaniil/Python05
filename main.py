@@ -1,12 +1,12 @@
-def print_number(number):
-    number_str = str(number)
-    last_letter = number_str[-1]
-    for i in number_str:
-        if i != last_letter:
-            print(i, ", ", sep="", end="")
+def print_number_with_multi(number):
+    while number > 0:
+        num = number % 10
+        number //= 10
+        if number:
+            print(num, ", ", sep="", end="")
         else:
-            print(last_letter)
+            print(num)
 
 
 number = int(input("Введите число: "))
-print_number(number)
+print_number_with_multi(number)
